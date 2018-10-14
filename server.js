@@ -48,6 +48,13 @@ app.get('/about', (req,res) => {
     });
 });
 
+app.get('/projects', (req,res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects Page'
+        // currenYear: new Date().getFullYear()
+    });
+});
+
 app.get('/bad', (req,res) => {
     res.send({errorMessage: 'bad request'});
 });
